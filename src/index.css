@@ -1,0 +1,165 @@
+/* src/components/Modal.css */
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  font-size: 20px;
+}
+
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.about-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  font-size: 2xl;
+  font-weight: bold;
+}
+
+.about-title {
+  text-align: center;
+}
+
+.about-role {
+  cursor: pointer;
+  text-decoration: underline;
+  margin: 0 0.5rem;
+}
+/* src/components/Modal.css */
+
+/* src/components/Modal.css */
+
+body,
+html {
+  font-family: Arial, sans-serif;
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+  max-width: 90%; /* Ensure it doesn't exceed screen size */
+  max-height: 90%; /* Ensure it doesn't exceed screen size */
+  overflow-y: auto; /* Add scrolling if content overflows */
+  display: flex;
+  flex-direction: column;
+}
+
+.close-button {
+  position: absolute;
+  top: 0.25rem; /* Closer to the top */
+  right: 0.25rem; /* Closer to the right */
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+  color: #4a5568; /* text-gray-700 */
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.close-button:hover {
+  color: #e53e3e; /* text-red-600 */
+  transform: scale(1.2);
+}
+
+.project-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.project-grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.project-grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.project-card {
+  border: 1px solid #e2e8f0; /* border-gray-300 */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.project-card-inner {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: bold;
+  color: black;
+}
+
+.project-details,
+.project-technologies,
+.project-link {
+  color: black;
+}
+
+.project-technologies {
+  margin-top: 0.5rem;
+}
+
+.project-link {
+  color: #3b82f6; /* text-blue-500 */
+  text-decoration: underline;
+  margin-top: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .modal-content {
+    padding: 1rem;
+    max-width: 100%;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
